@@ -1,4 +1,4 @@
-<?php require "incs/header.php"?>
+<?php require VIEWS . '/incs/header.php'?>
     <main class="main py-4">
         <div class="container">
             <div class="row">
@@ -14,8 +14,8 @@
                     <?php endforeach; ?>
 
                 </div>
-<?php require 'incs/sidebar.php'?>
+<?php require VIEWS . '/incs/sidebar.php'?>
             </div>
         </div>
     </main>
-<?php require 'incs/footer.php' ?>
+<?php require VIEWS . '/incs/footer.php' ?>

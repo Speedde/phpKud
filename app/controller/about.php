@@ -1,5 +1,4 @@
 <?php
-require 'func.php';
 $title = 'My Blog :: About';
 
 $post = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad amet aperiam autem commodi consectetur dolorem dolorum, eos esse fugit laborum mollitia natus nesciunt officiis porro rem repellat reprehenderit tempore?</p>";
@@ -27,4 +26,4 @@ $recent_post = [
 
 ];
 
-require_once 'app/about.tpl.php';
+require_once VIEWS . '/about.tpl.php';
