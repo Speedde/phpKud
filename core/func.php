@@ -8,6 +8,11 @@ function dump($data) {
 
 function dd($data)
 {
-    data($data);
+    dump($data);
     die;
+}
+function abort($code = 404)
+{
+    http_response_code($code);
+    require VIEWS . "/errors/{$code}.php";
 }

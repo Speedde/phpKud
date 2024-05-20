@@ -1,12 +1,7 @@
 <?php
 
-define('ROOT', dirname(__DIR__));
-define('PUBLIC', ROOT . '/public');
-define('CORE', ROOT . '/core');
-define('APP', ROOT . '/app');
-define('CONTROLLERS', APP . '/controller');
-define('VIEWS', APP . '/views');
+require dirname(__DIR__) . '/config/config.php';
 
 require CORE . '/func.php';
+require CORE . '/router.php';
 
-require_once CONTROLLERS . '/index.php';
