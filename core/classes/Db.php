@@ -4,11 +4,24 @@ class Db
 {
     private $connection;
     private $stmt;
-    public function __construct(array $db_config)
+    private static $instance = null;
+    private function __construct() {
+
+    }
+    public static function getInstance()
+    {
+        if(self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    public function getConnect(array $db_config)
     {
         $dsn = "mysql:host={$db_config['host']};dbname={$db_config['name']};charset={$db_config['charset']}";
         try {
             $this->connection = new PDO($dsn, $db_config['name'], $db_config['password'], $db_config['options']);
+            return $this;
         } catch (PDOException $e) {
             echo "{$e->getMessage()}";
         }

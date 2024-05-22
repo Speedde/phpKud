@@ -1,6 +1,6 @@
 <?php
 $title = 'My Blog :: Home';
-$posts = $db->query("SELECT * FROM test.TEST")->findAll();
+$posts = $db->query("SELECT * FROM test.TEST ORDER BY id DESC LIMIT 3")->findAll();
 $recent_post = $db->query("SELECT * FROM test.TEST")->findAll();
 //$recent_post = [
 //        1 => [
