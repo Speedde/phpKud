@@ -10,18 +10,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // validation
     $error = [];
-    if(empty(trim($data['title']))) {
+    if(empty($data['title'])) {
         $error['title'] = "Title is reqiured";
     }
-    if(empty(trim($data['excerpt']))) {
+    if(empty($data['excerpt'])) {
         $error['excerpt'] = "Excerpt is reqiured";
     }
-    if(empty(trim($data['content']))) {
+    if(empty($data['content'])) {
         $error['content'] = "Content is reqiured";
     }
     if(empty($error)) {
-        $db->query("INSERT INTO test.TEST (`title`, `excerpt`, `content`) VALUES (?, ?, ?)",
-            [$_POST['title'], $_POST['excerpt'], $_POST['content']]);
+        $db->query("INSERT INTO test.TEST (`title`, `excerpt`, `content`) VALUES (:title, :excerpt, :content)",
+        $data);
+        redirect('/phpStudy/post/create');
     }
 
 }

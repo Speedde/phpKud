@@ -8,7 +8,8 @@
                     <form action="" method="POST">
                         <div class="mb-3">
                             <label for="title" class="form-label">Example label</label>
-                            <input name="title" type="text" class="form-control" id="title" placeholder="Example input placeholder">
+                            <input name="title" type="text" class="form-control" id="title" placeholder="Example input placeholder"
+                                   value="<?=old('title')?>">
                         </div>
                         <?php if(isset($error['title'])): ?>
                             <div id="validationServer05Feedback" class="invalid-feedback d-block">
@@ -17,7 +18,8 @@
                         <?php endif; ?>
                         <div class="mb-3">
                             <label for="excerpt" class="form-label">Another label</label>
-                            <input name="excerpt" type="text" class="form-control" id="excerpt" placeholder="Another input placeholder">
+                            <input name="excerpt" type="text" class="form-control" id="excerpt" placeholder="Another input placeholder"
+                                   value="<?=old('excerpt')?>">
                         </div>
                         <?php if(isset($error['excerpt'])): ?>
                             <div id="validationServer05Feedback" class="invalid-feedback d-block">
@@ -26,7 +28,7 @@
                         <?php endif; ?>
                         <div class="mb-3">
                             <label for="content" class="form-label">Example textarea</label>
-                            <textarea name="content" class="form-control" id="content" rows="3"></textarea>
+                            <textarea name="content" class="form-control" id="content" rows="3"><?=old('content')?></textarea>
                         </div>
                         <?php if(isset($error['content'])): ?>
                             <div id="validationServer05Feedback" class="invalid-feedback d-block">
