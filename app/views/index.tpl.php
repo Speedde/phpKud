@@ -13,7 +13,7 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-
+                    <?=$pagination?>
                 </div>
 <?php require VIEWS . '/incs/sidebar.php'?>
             </div>

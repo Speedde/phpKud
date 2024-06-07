@@ -44,3 +44,13 @@ function redirect($url = '') {
     header("Location:{$redirect}");
     die;
 }
+function getAlerts() {
+    if(!empty($_SESSION['error'])) {
+        require VIEWS . "/incs/allert-dangerous.php";
+        unset($_SESSION['error']);
+    }
+    if(!empty($_SESSION['success'])) {
+        require VIEWS . "/incs/allert-success.php";
+        unset($_SESSION['success']);
+    }
+}

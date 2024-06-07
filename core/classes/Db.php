@@ -1,5 +1,9 @@
 <?php
 
+namespace myfrm;
+use PDO;
+use PDOException;
+
 class Db
 {
     private $connection;
@@ -48,5 +52,9 @@ class Db
             abort();
         }
         return $res;
+    }
+    public function getColumn()
+    {
+        return $this->stmt->fetchColumn();
     }
 }

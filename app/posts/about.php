@@ -1,4 +1,5 @@
 <?php
+$db = \myfrm\App::getApp()->getService('\myfrm\Db');
 $title = 'My Blog :: About';
 
 $post = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad amet aperiam autem commodi consectetur dolorem dolorum, eos esse fugit laborum mollitia natus nesciunt officiis porro rem repellat reprehenderit tempore?</p>";
