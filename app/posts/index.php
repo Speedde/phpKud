@@ -18,6 +18,5 @@ $pagination = $post->renderHtml();
 
 
 
-
 require_once VIEWS .'/index.tpl.php';
 

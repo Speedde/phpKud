@@ -6,7 +6,7 @@ class Validator {
     protected $errors = [];
     protected $rules_list = ['require', 'min', 'max', 'email'];
     protected $messages = [
-        'required' => 'The :fieldname: is required',
+        'require' => 'The :fieldname: is required',
         'min' => 'The :fieldname: field must be a minimum :ruleval: characters',
         'max' => 'The :fieldname: field must be a maximum :ruleval: characters',
         'email' => 'Not a valid email'
